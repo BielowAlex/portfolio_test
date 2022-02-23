@@ -55,7 +55,7 @@ class Effect{
 const effect = new Effect(layer.width,layer.height);
 
 let lastTime = 0;
-const fps = 60;
+const fps = 45;
 const nextFrame = 1000/fps;
 let timer = 0
 
@@ -63,7 +63,7 @@ function anim(timeStamp){
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
     if(timer > nextFrame) {
-        context.fillStyle = 'rgba(0,0,0,0.05)';
+        context.fillStyle = 'rgba(0,0,0,0.09)';
         context.fillRect(0, 0, layer.width, layer.height);
         context.font = effect.fontSize + 'px monospace';
         effect.symArray.forEach(symbol => symbol.draw(context));
