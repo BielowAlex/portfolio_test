@@ -1,24 +1,25 @@
 const layer = document.getElementById('canvasLayer');
 const context = layer.getContext('2d');
 
+// document.body.style.backgroundImage = `url(${layer.toDataURL()})`;
+
 layer.width = window.innerWidth;
 layer.height = window.innerHeight;
 
 class  Symbol{
     constructor(x, y, fontSize, layerHeight ) {
-        this.chars = " ン ワ ラ ヤ マ ハ ナ タ サ カ ア リ ミ ヒ ニ シ キ イ ル ユ ム フ ヌ ツ ス ク ウ レ メ ヘ ネ テ セ ケ エ ヲ ロ ヨ モ ホ ノ ト ソ コ オ" +
-            " 0 1 2 3 4 5 6 7 8 9";
+        this.chars = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789";
         this.x = x;
         this.y = y;
-        this.layerHeight = layerHeight;
         this.fontSize = fontSize;
         this.activeChar = '';
+        this.layerHeight = layerHeight;
     }
     draw(context){
         this.activeChar = this.chars.charAt(Math.floor(Math.random()*this.chars.length))
         context.fillStyle = 'red';
-        context.fillText(this.activeChar,this.x * this.fontSize,this.y);
-        if(this.y * this.fontSize > this.layerHeight){
+        context.fillText(this.activeChar,this.x * this.fontSize,this.y*this.fontSize);
+        if(this.y * this.fontSize > this.layerHeight && Math.random() > 0.97){
             this.y = 0;
         }else{
             this.y += 1;
@@ -42,13 +43,41 @@ class Effect{
            this.symArray[i] = new Symbol(i, 0, this.fontSize, this.layerHeight);
         }
     }
+    resize(width,height){
+        this.layerWidth = width;
+        this.layerHeight = height;
+        this.col = this.layerWidth/this.fontSize;
+        this.symArray = [];
+        this.#init();
+    }
 }
 
 const effect = new Effect(layer.width,layer.height);
 
-function anim(){
-    context.font = effect.fontSize + 'px monospace';
-    effect.symArray.forEach(symbol => symbol.draw(context));
+let lastTime = 0;
+const fps = 60;
+const nextFrame = 1000/fps;
+let timer = 0
+
+function anim(timeStamp){
+    const deltaTime = timeStamp - lastTime;
+    lastTime = timeStamp;
+    if(timer > nextFrame) {
+        context.fillStyle = 'rgba(0,0,0,0.05)';
+        context.fillRect(0, 0, layer.width, layer.height);
+        context.font = effect.fontSize + 'px monospace';
+        effect.symArray.forEach(symbol => symbol.draw(context));
+        timer = 0;
+    }else{
+        timer += deltaTime;
+    }
     requestAnimationFrame(anim);
 }
-anim();
+anim(0);
+
+
+window.addEventListener('resize',function (){
+    layer.width = window.innerWidth;
+    layer.height = window.innerHeight;
+    effect.resize(layer.width,layer.height)
+})
