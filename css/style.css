@@ -57,19 +57,21 @@ body{
 .wrap{
     display:  flex;
     padding: 20px;
-    color: white;
+    flex-wrap: wrap;
+    color: #F48B95;
     z-index: 1;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.51);
 }
 
 .wrap > img{
-    width: 400px;
+    width: 30%;
     height: 300px;
 }
 
 .bio{
     margin-left:10px;
+    width: 68%;
 }
 
 .bio > h2{
@@ -78,6 +80,6 @@ body{
 
 .bio > p{
     padding: 10px 0 10px 0;
-    font-size: 14px;
+    font-size: 20px;
 }
 

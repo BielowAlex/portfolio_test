@@ -63,7 +63,7 @@ function anim(timeStamp){
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
     if(timer > nextFrame) {
-        context.fillStyle = 'rgba(0,0,0,0.05)';
+        context.fillStyle = 'rgba(0,0,0,0.14)';
         context.fillRect(0, 0, layer.width, layer.height);
         context.font = effect.fontSize + 'px monospace';
         effect.symArray.forEach(symbol => symbol.draw(context));
