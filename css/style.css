@@ -58,7 +58,7 @@ body{
     display:  flex;
     padding: 20px;
     flex-wrap: wrap;
-    color: #F48B95;
+    color: #FF394A;
     z-index: 1;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.51);
@@ -67,6 +67,7 @@ body{
 .wrap > img{
     width: 30%;
     height: 300px;
+    margin-right: 10px;
 }
 
 .bio{
