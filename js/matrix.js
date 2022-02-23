@@ -43,7 +43,7 @@ class Effect{
         }
     }
 }
-//
+
 const effect = new Effect(layer.width,layer.height);
 
 function anim(){
