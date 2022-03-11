@@ -3,8 +3,11 @@ const context = layer.getContext('2d');
 
 // document.body.style.backgroundImage = `url(${layer.toDataURL()})`;
 
-layer.width = window.innerWidth;
-layer.height = window.innerHeight;
+layer.width = document.body.offsetWidth;
+layer.height = document.body.scrollHeight;
+console.log(document.body.offsetWidth);
+console.log(document.body.scrollHeight);
+
 
 class  Symbol{
     constructor(x, y, fontSize, layerHeight ) {

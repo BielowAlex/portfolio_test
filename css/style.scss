@@ -1,0 +1,173 @@
+@import "nullStyle";
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+$txt_color:#FF394A;
+$txt_color2: #f12536;
+$txt_color4: #101010;
+$h2_fs:30px;
+$test:#0074BD;
+
+body{
+  font-family: 'Azeret Mono', monospace;
+}
+
+//======================================================================================================//
+//===========================================Canvas=====================================================//
+//======================================================================================================//
+.parentCanvas {
+  position: relative;
+  z-index: 1;
+
+  canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+//======================================================================================================//
+//===========================================Canvas=====================================================//
+//======================================================================================================//
+
+
+//======================================================================================================//
+//===========================================Biography==================================================//
+//======================================================================================================//
+.wrap {
+  display: flex;
+  padding: 20px;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(66, 65, 65, 0.09);
+
+  img {
+    width: 250px;
+    height: 300px;
+    margin-right: 10px;
+  }
+}
+
+.me {
+  margin-right: 10px;
+  transform: translate(-100px, 0);
+  opacity: 0;
+  transition: 1s;
+}
+
+.img__anim {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.bio {
+  position: center;
+  margin-left: 10px;
+  width: 68%;
+  color: $txt_color;
+  transform: translate(120px, 0);
+  opacity: 0;
+  transition: 1s;
+
+  h2 {
+    font-size: $h2_fs;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+  }
+}
+
+.bio__anim {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+//======================================================================================================//
+//===========================================Biography==================================================//
+//======================================================================================================//
+
+//======================================================================================================//
+//===========================================Carrousel==================================================//
+//======================================================================================================//
+
+.carrousel_wrap {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.87);
+  height: 300px;
+  padding: 20px;
+}
+.title {
+  overflow: hidden;
+  padding: 5px;
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    color: $txt_color;
+    font-size: $h2_fs;
+    transform: translate(0, 20px);
+    opacity: 0;
+    transition: 1s;
+  }
+}
+
+.title>h2.car_h2_anim{
+  transform: translate(0,0);
+  opacity: 1;
+}
+.carrousel{
+  margin-top: 20px;
+  height: 150px;
+
+  overflow: hidden;
+  align-items: center;
+
+  border-right: 2px solid $txt_color;
+  border-left: 2px solid $txt_color;
+  position: relative;
+  .img_list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 90px;
+    transform: translate(0,0);
+    animation: carrousel 10s linear infinite;
+    //transition: all ease 20s ;
+    //transition-property: infinite;
+
+    img {
+      width: 125px;
+      height: 125px;
+      transform: translate(0, 0);
+
+    }
+  }
+}
+
+@keyframes carrousel {
+  from{
+    transform: translate(0,0);
+  }
+  to{
+    transform: translate(-104.2%,0);
+  }
+}
+
+.img_list.carrousel_anim{
+
+}
+
+
+//======================================================================================================//
+//===========================================Carrousel==================================================//
+//======================================================================================================//
+
+

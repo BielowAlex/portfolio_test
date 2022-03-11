@@ -1,86 +1,200 @@
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-*,*:before,*:after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-
-nav,footer,header,aside{display: block;}
-
-html,body{
-    height: 100%;
-    width: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-input,button,textarea{font-family:inherit;}
-
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-
-body{
-    /*overflow: hidden;*/
-    background-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-.parentCanvas{
-    position: relative;
-    z-index: 1;
-}
-.canvas{
-    width: 100%;
-    height: 100%;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.parentCanvas > canvas{
-    position: absolute;
-    z-index: -1;
-    top:0;
-    left: 0;
-}
-.wrap{
-    display:  flex;
-    padding: 20px;
-    flex-wrap: wrap;
-    color: #FF394A;
-    z-index: 1;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.51);
+:focus, :active {
+  outline: none;
 }
 
-.wrap > img{
-    width: 30%;
-    height: 300px;
-    margin-right: 10px;
+a:focus, a:active {
+  outline: none;
 }
 
-.bio{
-    margin-left:10px;
-    width: 68%;
+nav, footer, header, aside {
+  display: block;
 }
 
-.bio > h2{
-    font-size: 30px;
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-.bio > p{
-    padding: 10px 0 10px 0;
-    font-size: 20px;
+input, button, textarea {
+  font-family: inherit;
 }
 
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Azeret Mono", monospace;
+}
+
+.parentCanvas {
+  position: relative;
+  z-index: 1;
+}
+.parentCanvas canvas {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  display: flex;
+  padding: 20px;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(66, 65, 65, 0.09);
+}
+.wrap img {
+  width: 250px;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.me {
+  margin-right: 10px;
+  transform: translate(-100px, 0);
+  opacity: 0;
+  transition: 1s;
+}
+
+.img__anim {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.bio {
+  position: center;
+  margin-left: 10px;
+  width: 68%;
+  color: #FF394A;
+  transform: translate(120px, 0);
+  opacity: 0;
+  transition: 1s;
+}
+.bio h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.bio p {
+  padding: 10px 0 10px 0;
+  font-size: 20px;
+}
+
+.bio__anim {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.carrousel_wrap {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.87);
+  height: 300px;
+  padding: 20px;
+}
+
+.title {
+  overflow: hidden;
+  padding: 5px;
+}
+.title h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #FF394A;
+  font-size: 30px;
+  transform: translate(0, 20px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.title > h2.car_h2_anim {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.carrousel {
+  margin-top: 20px;
+  height: 150px;
+  overflow: hidden;
+  align-items: center;
+  border-right: 2px solid #FF394A;
+  border-left: 2px solid #FF394A;
+  position: relative;
+}
+.carrousel .img_list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 90px;
+  transform: translate(0, 0);
+  animation: carrousel 10s linear infinite;
+}
+.carrousel .img_list img {
+  width: 125px;
+  height: 125px;
+  transform: translate(0, 0);
+}
+
+@keyframes carrousel {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-104.2%, 0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
