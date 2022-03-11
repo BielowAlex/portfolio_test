@@ -125,19 +125,19 @@ body{
   opacity: 1;
 }
 .carrousel{
-  margin-top: 20px;
+  //margin-top: 20px;
   height: 150px;
-
+  width: 1000px;
   overflow: hidden;
   align-items: center;
-
+  margin: 20px auto;
   border-right: 2px solid $txt_color;
   border-left: 2px solid $txt_color;
   position: relative;
   .img_list {
     display: flex;
     justify-content: space-between;
-    column-gap: 90px;
+    column-gap: 45px;
     transform: translate(0,0);
     animation: carrousel 10s linear infinite;
     //transition: all ease 20s ;
@@ -157,13 +157,11 @@ body{
     transform: translate(0,0);
   }
   to{
-    transform: translate(-104.2%,0);
+    transform: translate(-1000px-20px,0);
   }
 }
 
-.img_list.carrousel_anim{
 
-}
 
 
 //======================================================================================================//

@@ -167,10 +167,11 @@ body {
 }
 
 .carrousel {
-  margin-top: 20px;
   height: 150px;
+  width: 1000px;
   overflow: hidden;
   align-items: center;
+  margin: 20px auto;
   border-right: 2px solid #FF394A;
   border-left: 2px solid #FF394A;
   position: relative;
@@ -178,7 +179,7 @@ body {
 .carrousel .img_list {
   display: flex;
   justify-content: space-between;
-  column-gap: 90px;
+  column-gap: 45px;
   transform: translate(0, 0);
   animation: carrousel 10s linear infinite;
 }
@@ -193,7 +194,7 @@ body {
     transform: translate(0, 0);
   }
   to {
-    transform: translate(-104.2%, 0);
+    transform: translate(-1020px, 0);
   }
 }
 
