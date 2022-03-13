@@ -126,6 +126,10 @@ body {
   position: sticky;
 }
 
+.no_bio {
+  opacity: 0;
+}
+
 .me {
   margin-right: 10px;
   transform: translate(-100px, 0);

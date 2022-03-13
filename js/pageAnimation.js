@@ -75,11 +75,20 @@ const start = pageYOffset;
 const wrapBio = document.querySelector('.wrap');
 
 window.addEventListener('scroll',function (){
+
     if(pageYOffset>start){
         wrapBio.classList.add('hide_scroll');
     }else {
         wrapBio.classList.remove('hide_scroll');
     }
+
+    if(pageYOffset>500){
+        wrapBio.classList.add('no_bio');
+    }else if(pageYOffset<500){
+        wrapBio.classList.remove('no_bio');
+    }
+
+
 })
 
 const bioH2 = document.getElementById('bio_h2')
