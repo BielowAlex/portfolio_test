@@ -300,9 +300,11 @@ body {
   margin-bottom: 15px;
 }
 .project_wrap .project .proj_img {
-  width: 100%;
+  margin: 0 auto;
+  width: 250px;
   height: 250px;
   border: 0px solid #850919;
+  border-radius: 50%;
   box-shadow: #c01723 0px 0px 0px 0px;
   transition: all ease 0.4s;
 }
@@ -388,6 +390,7 @@ body {
 
 .line_anim {
   width: 100%;
+  box-shadow: #c01723 0px 0px 15px 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

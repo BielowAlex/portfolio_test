@@ -301,9 +301,11 @@ body {
       margin-bottom: 15px;
     }
     .proj_img {
-      width: 100%;
+      margin: 0 auto;
+      width: 250px;
       height: 250px;
       border: 0px solid $txt_color;
+      border-radius:50%;
       box-shadow: $txt_color2 0px 0px 0px 0px;
       transition: all ease 0.4s;
       &.proj_img_anim{
@@ -418,5 +420,5 @@ body {
 
 .line_anim {
   width: 100%;
-  //box-shadow: $txt_color2 0px 0px 15px 2px;
+  box-shadow: $txt_color2 0px 0px 15px 2px;
 }
