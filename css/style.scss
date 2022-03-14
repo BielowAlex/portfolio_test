@@ -302,10 +302,10 @@ body {
     }
     .proj_img {
       margin: 0 auto;
-      width: 250px;
+      width: 350px;
       height: 250px;
       border: 0px solid $txt_color;
-      border-radius:50%;
+      border-radius:20px;
       box-shadow: $txt_color2 0px 0px 0px 0px;
       transition: all ease 0.4s;
       &.proj_img_anim{

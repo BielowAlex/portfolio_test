@@ -1,0 +1,534 @@
+@media screen and (max-width: 540px) {
+
+
+  .header_nav {
+    justify-content: space-between;
+
+    img {
+      margin-left: 15px;
+    }
+
+    .nav {
+      display: none;
+    }
+  }
+
+
+  .burger {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .header_content {
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    .title_section {
+      padding: 30px;
+    }
+  }
+
+
+  .section_company {
+    padding: 0;
+  }
+
+  .border {
+    margin-top: 100px;
+
+    .content_box {
+      img {
+        display: none;
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  }
+
+
+  .statistic {
+    padding: 10px;
+
+    img {
+      height: 200px;
+      width: 400px;
+    }
+  }
+
+  .border2 {
+    padding: 10px;
+
+    .content_box {
+      img {
+        display: none;
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  }
+
+
+  .sprig_info {
+    padding: 20px;
+  }
+
+  .block {
+    flex-direction: column-reverse;
+
+    .info {
+      text-align: center;
+
+      img {
+        display: none;
+      }
+    }
+
+  }
+
+
+  .delivers_content {
+    padding: 10px;
+
+    .more_info {
+      padding: 15px;
+      margin: 0;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+
+  .share_content {
+    text-align: center;
+    padding: 20px;
+    display: block;
+
+    img {
+      position: relative;
+      z-index: -10;
+      bottom: 100px;
+      right: 50px;
+    }
+  }
+
+
+  .border3 {
+    flex-wrap: wrap;
+    margin: 10px;
+
+    &.study, &.study2 {
+      padding: 20px;
+    }
+  }
+
+
+  .footer {
+    padding: 10px;
+
+    .links {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  .copyright {
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+
+  .header_nav {
+    justify-content: space-between;
+
+    img {
+      margin-left: 30px;
+    }
+
+    .nav {
+      display: none;
+    }
+  }
+
+
+  .burger {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .header_content {
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    .title_section {
+      padding: 30px;
+    }
+
+    .photo {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        position: static;
+        width: 70%;
+      }
+    }
+  }
+
+
+  .section_company {
+    padding: 0;
+  }
+
+  .border {
+    margin-top: 100px;
+
+    .content_box {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 600px;
+        width: 400px;
+
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  }
+
+
+  .statistic {
+    padding: 10px;
+
+    img {
+      height: 400px;
+      width: 600px;
+    }
+  }
+
+
+  .border2 {
+    padding: 10px;
+
+    .content_box {
+      img {
+        display: none;
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  }
+
+  .sprig_info {
+    padding: 20px;
+  }
+
+  .block {
+    flex-direction: column-reverse;
+
+    .info {
+      text-align: center;
+      margin: 0 auto;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .delivers_content {
+    padding: 10px;
+
+    .more_info {
+      padding: 15px;
+      margin: 0;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .share_content {
+    text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    img {
+      position: relative;
+      left: 30%;
+      width: 500px;
+      height: 400px;
+    }
+  }
+
+  .border3 {
+    flex-wrap: wrap;
+    margin: 10px;
+
+    &.study, &.study2 {
+      padding: 20px;
+    }
+  }
+
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footer > .links {
+    flex-wrap: wrap;
+    padding: 30px;
+    flex-direction: row;
+    .list{
+      width: 100px;
+    }
+  }
+
+  .copyright {
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .header_nav {
+    justify-content: space-between;
+
+    .nav {
+      display: none;
+    }
+
+    img {
+      margin-left: 30px;
+    }
+  }
+
+
+  .burger {
+    margin-right: 30px;
+    display: block;
+  }
+
+  .company_list {
+    padding: 50px;
+  }
+
+  .header_content {
+    row-gap: 20px;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    .title_section {
+      padding: 30px;
+    }
+
+    .photo {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        position: static;
+      }
+    }
+  }
+
+
+  .section_company {
+    padding: 0;
+  }
+
+  .border {
+    margin-top: 100px;
+
+    .content_box {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 100px auto;
+      img {
+        height: 300px;
+        width: 400px;
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+
+  }
+
+  .statistic {
+    padding: 10px;
+
+    img {
+      height: 400px;
+      width: 600px;
+    }
+
+  }
+
+  .border2 {
+    padding: 0;
+
+    .content_box {
+      margin: 20px auto;
+      img {
+        display: none;
+      }
+
+      .title {
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  }
+
+
+  .sprig_info {
+    padding: 20px;
+
+    .title {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .block {
+    flex-direction: column-reverse;
+
+    .info {
+      text-align: center;
+      margin: 0 auto;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+
+  .delivers_content {
+    padding: 10px;
+
+    .more_info {
+      padding: 15px;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .share_content {
+    text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    img {
+      display: none;
+    }
+
+    .title {
+      h2, p {
+        max-width: 100%;
+      }
+    }
+  }
+
+
+  .border3 {
+    flex-wrap: wrap;
+    margin: 0;
+
+    .study, .study2 {
+      padding: 20px;
+    }
+  }
+
+
+  .footer {
+    padding: 10px;
+
+    .links {
+      flex-wrap: wrap;
+      padding: 30px;
+    }
+  }
+
+  .copyright {
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header_nav {
+    justify-content: space-between;
+
+    .nav {
+      display: none;
+    }
+
+
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .nav > a {
+    margin-right: 10px;
+  }
+  .statistic {
+    padding: 50px;
+  }
+  .delivers_content {
+    padding: 50px;
+    max-width: 100%;
+  }
+  .more_info {
+    justify-content: normal;
+    column-gap: 100px;
+  }
+  .share_content {
+    padding-left: 50px;
+  }
+  .study {
+    padding: 50px;
+  }
+}

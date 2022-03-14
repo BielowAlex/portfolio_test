@@ -301,10 +301,10 @@ body {
 }
 .project_wrap .project .proj_img {
   margin: 0 auto;
-  width: 250px;
+  width: 350px;
   height: 250px;
   border: 0px solid #850919;
-  border-radius: 50%;
+  border-radius: 20px;
   box-shadow: #c01723 0px 0px 0px 0px;
   transition: all ease 0.4s;
 }
