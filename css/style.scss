@@ -271,7 +271,8 @@ body {
   .project_list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 50px;
     column-gap: 50px;
     margin: 40px 20px;
   }
@@ -280,8 +281,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     transition: border ease;
-    width: 350px;
+    width: 300px;
     //height: 450px;
 
 
@@ -302,7 +304,7 @@ body {
     }
     .proj_img {
       margin: 0 auto;
-      width: 350px;
+      width: 300px;
       height: 250px;
       border: 0px solid $txt_color;
       border-radius:20px;
@@ -329,10 +331,11 @@ body {
       display: flex;
       justify-content: space-around;
       margin: 15px 0;
+      width: 100%;
 
       a {
         font-size: 20px;
-        padding: 10px;
+        padding: 5px;
         color: $txt_color2;
         border: 1px solid $txt_color2;
         display: block;

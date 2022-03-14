@@ -274,7 +274,8 @@ body {
 .project_wrap .project_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 50px;
   column-gap: 50px;
   margin: 40px 20px;
 }
@@ -282,8 +283,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   transition: border ease;
-  width: 350px;
+  width: 300px;
 }
 .project_wrap .project h3 {
   text-align: center;
@@ -301,7 +303,7 @@ body {
 }
 .project_wrap .project .proj_img {
   margin: 0 auto;
-  width: 350px;
+  width: 300px;
   height: 250px;
   border: 0px solid #850919;
   border-radius: 20px;
@@ -327,10 +329,11 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 15px 0;
+  width: 100%;
 }
 .project_wrap .project .project_btns a {
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   color: #c01723;
   border: 1px solid #c01723;
   display: block;
