@@ -96,7 +96,7 @@ body {
   &:hover {
     border: 1px solid $txt_color;
     transition: 1s;
-    box-shadow: $txt_color2 0px 0px 15px 2px;
+    box-shadow: $txt_color2 0 0 15px 2px;
   }
 }
 
@@ -136,7 +136,7 @@ body {
   width: 0;
   border-bottom: 1px solid $txt_color2;
   margin: 0 auto;
-  box-shadow: $txt_color2 0px 0px 0px 0px;
+  box-shadow: $txt_color2 0 0 0 0px;
   transition: 0.4s;
 }
 
@@ -306,13 +306,13 @@ body {
       margin: 0 auto;
       width: 300px;
       height: 250px;
-      border: 0px solid $txt_color;
+      border: 0 solid $txt_color;
       border-radius:20px;
-      box-shadow: $txt_color2 0px 0px 0px 0px;
+      box-shadow: $txt_color2 0 0 0 0px;
       transition: all ease 0.4s;
       &.proj_img_anim{
         border: 1px solid $txt_color;
-        box-shadow: $txt_color2 0px 0px 15px 2px;
+        box-shadow: $txt_color2 0 0 15px 2px;
       }
     }
     .proj_line{
@@ -324,7 +324,7 @@ body {
       &.proj_line_anim{
         width: 100%;
         border-bottom: 1px solid $txt_color;
-        box-shadow: $txt_color2 0px 0px 15px 2px;
+        box-shadow: $txt_color2 0 0 15px 2px;
       }
     }
     .project_btns {
@@ -347,11 +347,11 @@ body {
         &:hover {
           color: black !important;
           //background: $txt_color2;
-          box-shadow: $txt_color2 0px 0px 15px 2px;
+          box-shadow: $txt_color2 0 0 15px 2px;
         }
 
         &:hover:before {
-          right: 0%;
+          right: 0;
           left: auto;
           width: 100%;
         }
@@ -359,10 +359,10 @@ body {
         &:before {
           display: block;
           position: absolute;
-          top: 0px;
-          left: 0px;
+          top: 0;
+          left: 0;
           height: 100%;
-          width: 0px;
+          width: 0;
           z-index: -1;
           content: '';
           color: #000 !important;
@@ -423,5 +423,5 @@ body {
 
 .line_anim {
   width: 98%;
-  box-shadow: $txt_color2 0px 0px 15px 2px;
+  box-shadow: $txt_color2 0 0 15px 2px;
 }
