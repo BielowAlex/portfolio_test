@@ -91,6 +91,11 @@ body {
   font-weight: bold;
 }
 
+.layer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .parentCanvas {
   position: relative;
   z-index: 1;
@@ -139,7 +144,7 @@ body {
 .me:hover {
   border: 1px solid #850919;
   transition: 1s;
-  box-shadow: #c01723 0px 0px 15px 2px;
+  box-shadow: #c01723 0 0 15px 2px;
 }
 
 .img__anim {
@@ -174,7 +179,7 @@ body {
   width: 0;
   border-bottom: 1px solid #c01723;
   margin: 0 auto;
-  box-shadow: #c01723 0px 0px 0px 0px;
+  box-shadow: #c01723 0 0 0 0px;
   transition: 0.4s;
 }
 
@@ -244,7 +249,6 @@ body {
   }
 }
 .project_wrap {
-  position: sticky;
   z-index: 1;
   width: 100%;
   background-color: black;
@@ -305,14 +309,14 @@ body {
   margin: 0 auto;
   width: 300px;
   height: 250px;
-  border: 0px solid #850919;
+  border: 0 solid #850919;
   border-radius: 20px;
-  box-shadow: #c01723 0px 0px 0px 0px;
+  box-shadow: #c01723 0 0 0 0px;
   transition: all ease 0.4s;
 }
 .project_wrap .project .proj_img.proj_img_anim {
   border: 1px solid #850919;
-  box-shadow: #c01723 0px 0px 15px 2px;
+  box-shadow: #c01723 0 0 15px 2px;
 }
 .project_wrap .project .proj_line {
   margin: 20px auto;
@@ -323,7 +327,7 @@ body {
 .project_wrap .project .proj_line.proj_line_anim {
   width: 100%;
   border-bottom: 1px solid #850919;
-  box-shadow: #c01723 0px 0px 15px 2px;
+  box-shadow: #c01723 0 0 15px 2px;
 }
 .project_wrap .project .project_btns {
   display: flex;
@@ -343,20 +347,20 @@ body {
 }
 .project_wrap .project .project_btns a:hover {
   color: black !important;
-  box-shadow: #c01723 0px 0px 15px 2px;
+  box-shadow: #c01723 0 0 15px 2px;
 }
 .project_wrap .project .project_btns a:hover:before {
-  right: 0%;
+  right: 0;
   left: auto;
   width: 100%;
 }
 .project_wrap .project .project_btns a:before {
   display: block;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   height: 100%;
-  width: 0px;
+  width: 0;
   z-index: -1;
   content: "";
   color: #000 !important;
@@ -393,7 +397,7 @@ body {
 
 .line_anim {
   width: 98%;
-  box-shadow: #c01723 0px 0px 15px 2px;
+  box-shadow: #c01723 0 0 15px 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

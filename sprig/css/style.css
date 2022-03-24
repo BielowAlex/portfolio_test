@@ -1,3 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -21,9 +93,7 @@ body {
   height: 83px;
   width: 100%;
   display: flex;
-  position: sticky;
   z-index: 10;
-  top: 0;
   justify-content: space-around;
   background-color: white;
   align-items: center;
@@ -110,7 +180,6 @@ body {
 }
 
 .company_list {
-  height: 200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -300,12 +369,16 @@ body {
   background-color: #F9C600;
 }
 
+.deliver_wrap {
+  max-width: 100%;
+  margin: 0;
+}
+
 .delivers_content {
   margin-top: 150px;
   background-color: #F2EDE7;
   padding: 94px 122px;
-  max-width: 1280px;
-  width: 90%;
+  width: 100%;
 }
 .delivers_content span {
   font-style: normal;
@@ -366,7 +439,7 @@ body {
 }
 .item1 a {
   text-decoration: none;
-  color: var(--dark-blue-color);
+  color: #0B2330;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -498,11 +571,17 @@ button:hover {
   margin-top: 2px;
 }
 
+.all_wrap {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .footer {
   background-color: #0B2330;
-  padding: 30px;
+  padding: 30px 30px;
   width: 100%;
   color: white;
+  margin: 0;
 }
 .footer .title {
   text-align: center;

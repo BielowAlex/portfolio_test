@@ -75,16 +75,16 @@ const start = pageYOffset;
 const wrapBio = document.querySelector('.wrap');
 
 window.addEventListener('scroll',function (){
-
+    console.log(pageYOffset);
     if(pageYOffset>start){
         wrapBio.classList.add('hide_scroll');
     }else {
         wrapBio.classList.remove('hide_scroll');
     }
 
-    if(pageYOffset>500){
+    if(pageYOffset>300){
         wrapBio.classList.add('no_bio');
-    }else if(pageYOffset<500){
+    }else if(pageYOffset<300){
         wrapBio.classList.remove('no_bio');
     }
 
