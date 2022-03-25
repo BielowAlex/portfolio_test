@@ -7,21 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="res/css/style.css">
     <link rel="stylesheet" href="res/css/media.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
     <title>Denis Novak</title>
 </head>
 <body>
 
 <div class="popup">
-    <ul class="menu">
-        <li><a href="">Home</a></li>
-        <li><a href="#about_me">About me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contacts</a></li>
-    </ul>
+    <nav class="lang menu">
+        <a href="">Home</a>
+        <a href="#about_me">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contacts</a>
+    </nav>
     <div class="btns">
-        <span class="close" >
+        <span class="close">
             &#10006
         </span>
         <p class="language_btn2"><span class="ru">RU</span> | <span class="eng pressed">ENG</span></p>
@@ -32,7 +33,7 @@
 
     <header class="header">
 
-        <nav class="header_nav">
+        <nav class="lang  header_nav">
             <a href="#">Home</a>
             <a href="#about_me">About me</a>
             <a href="#skills">Skills</a>
@@ -41,7 +42,7 @@
         </nav>
 
         <div class="header_body">
-            <div class="header_body_title">
+            <div class="lang header_body_title _anim_item">
                 <h1>Denis Novak</h1>
                 <p>UX | UI designer
                     24 years old, Minsk</p>
@@ -59,58 +60,63 @@
         </div>
     </header>
 
-    <div id="about_me" class="about_me full_screen">
-        <h2>About me</h2>
-        <p>
+    <div id="about_me" class="lang  about_me full_screen">
+        <h2 class="_anim_item">About me</h2>
+
+        <p class="_anim_item">
             Hi, I'm Denis – UX/UI designer from Minsk.
             I'm interested in design and everything connected with it.
         </p>
 
-        <p>
+
+        <p class="p _anim_item">
             I'm studying at courses "Web and mobile design
             interfaces" in IT-Academy.
         </p>
-        <p>
+
+
+        <p class="_anim_item">
             Ready to implement excellent projects
             with wonderful people.
         </p>
+
     </div>
 
     <div id="skills" class="skills">
-        <div class="skills_title">
-            <h2>Skills</h2>
-            <p>I work in such programs as</p>
+        <div class="lang skills_title">
+            <h2 class="_anim_item">Skills</h2>
+            <p class="_anim_item">I work in such programs as</p>
         </div>
         <div class="programs_skills">
-            <img src="res/img/skills/photoshop.png" alt="photoshop">
-            <img src="res/img/skills/ilustrator.png" alt="illustrator">
-            <img src="res/img/skills/after_effects.png" alt="after effects">
-            <img src="res/img/skills/figma.png" alt="figma">
+            <img src="res/img/skills/photoshop.png" alt="photoshop" class="_anim_item">
+            <img src="res/img/skills/ilustrator.png" alt="illustrator" class="_anim_item">
+            <img src="res/img/skills/after_effects.png" alt="after effects" class="_anim_item">
+            <img src="res/img/skills/figma.png" alt="figma" class="_anim_item">
         </div>
     </div>
 
-    <div id="portfolio" class="portfolio full_screen">
-        <h2>Portfolio</h2>
+    <div id="portfolio" class="lang portfolio full_screen">
+        <h2 class="_anim_item">Portfolio</h2>
 
         <div class="project">
-            <img src="res/img/portfolio/fashion.png" alt="fashion">
-            <a href="#">Online fashion store - Homepage</a>
+            <img src="res/img/portfolio/fashion.png" alt="fashion" class="_anim_item">
+            <a href="#" class="_anim_item">Online fashion store - Homepage</a>
         </div>
 
         <div class="project">
-            <img src="res/img/portfolio/reebook.png" alt="reebook">
-            <a href="#">Reebok Store - Concept</a>
+            <img src="res/img/portfolio/reebook.png" alt="reebook" class="_anim_item">
+            <a href="#" class="_anim_item">Reebok Store - Concept</a>
         </div>
 
         <div class="project">
-            <img src="res/img/portfolio/braun.png" alt="braun">
-            <a href="#">Braun Landing Page - Concept</a>
+            <img src="res/img/portfolio/braun.png" alt="braun" class="_anim_item">
+            <a href="#" class="_anim_item">Braun Landing Page - Concept</a>
         </div>
 
     </div>
 
     <footer id="contact" class="contact">
-        <div class="contact_title">
+        <div class="lang contact_title">
             <h2>Contacts</h2>
             <p>
                 Want to know more or just chat?
@@ -124,29 +130,17 @@
             <a href="#"><img src="res/img/links/be.png" alt="be"></a>
             <a href="#"><img src="res/img/links/basket.png" alt="basket"></a>
         </div>
-        <p class="copyright">Like me on
-            LinkedIn, Instagram, Behance, Dribble</p>
+
+        <div class="lang copyright"><p>Like me on
+            LinkedIn, Instagram, Behance, Dribble</p></div>
     </footer>
 
 
 </div>
 
 
-<script >
-    let btn_close_popup = document.querySelector('.close');
-    let popup = document.querySelector('.popup');
-    btn_close_popup.onclick = function click() {
-        popup.classList.remove('show_popup')
-        // popup.classList.add('hide_popup');
-    }
-
-    let burgerButton = document.querySelector('.burger_button');
-    console.log(burgerButton);
-    burgerButton.onclick = ()=>{
-        console.log('1');
-        popup.classList.add('show_popup');
-
-    }
-</script>
+<script src="res/js/popup.js"></script>
+<script src="res/js/lang_selector.js"></script>
+<script src="res/js/scroll_anim.js"></script>
 </body>
 </html>

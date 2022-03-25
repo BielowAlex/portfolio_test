@@ -101,7 +101,7 @@ body {
   &:hover {
     border: 1px solid $txt_color;
     transition: 1s;
-    box-shadow: $txt_color2 0 0 15px 2px;
+    box-shadow: $txt_color2 0 0 10px,$txt_color2 0 0 30px ;
   }
 }
 
@@ -269,7 +269,7 @@ body {
 
     .line_anim {
       width: 100%;
-      //box-shadow: $txt_color2 0px 0px 15px 2px;
+      //box-shadow: $txt_color2 0px 0px 10px,$txt_color2 0px 0px 30px ;
     }
   }
 
@@ -329,7 +329,7 @@ body {
       &.proj_line_anim{
         width: 100%;
         border-bottom: 1px solid $txt_color;
-        box-shadow: $txt_color2 0 0 15px 2px;
+        box-shadow: $txt_color2 0 0 10px,$txt_color2 0 0 20px,$txt_color2 0 0 50px ;
       }
     }
     .project_btns {

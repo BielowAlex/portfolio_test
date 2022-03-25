@@ -1,75 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-:focus, :active {
-  outline: none;
-}
-
-a:focus, a:active {
-  outline: none;
-}
-
-nav, footer, header, aside {
-  display: block;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a, a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: 400;
-}
-
+@import "nullStyle.css";
 .contact .copyright, .contact .contact_title a, .contact .contact_title p, .portfolio .project a, .skills p, .about_me p, .header .header_body .header_body_title p {
   font-family: "Gilroy-Medium", sans-serif;
   font-size: 18px;
@@ -128,6 +57,7 @@ body {
 }
 .header .header_nav a:hover {
   color: #070707;
+  transform: scale(1.05);
 }
 .header .header_body {
   width: 100%;
@@ -137,6 +67,13 @@ body {
   height: 188px;
   justify-content: space-between;
   align-items: center;
+  transform: translate(0px, 70px);
+  opacity: 0;
+  transition: all ease 0.8s;
+}
+.header .header_body .header_body_title._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .header .header_body .header_body_title h1 {
   margin-top: auto;
@@ -195,12 +132,24 @@ body {
   width: 480px;
   line-height: 22px;
   color: #070707;
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.about_me p._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .about_me p:nth-child(4) {
   margin-bottom: 0;
 }
 .about_me h2 {
   margin-bottom: 35px;
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.about_me h2._active {
+  opacity: 1;
 }
 .about_me.full_screen {
   background: #F6F6F6;
@@ -212,10 +161,22 @@ body {
 }
 .skills h2 {
   margin-bottom: 65px;
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.skills h2._active {
+  opacity: 1;
 }
 .skills p {
   margin-bottom: 87px;
   text-align: center;
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.skills p._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .skills .programs_skills {
   width: 936.59px;
@@ -224,6 +185,26 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+.skills .programs_skills img {
+  transform: translate(0, 100px);
+  opacity: 0;
+}
+.skills .programs_skills img:nth-child(1) {
+  transition: all 0.8s ease 0s;
+}
+.skills .programs_skills img:nth-child(2) {
+  transition: all 0.8s ease 0.2s;
+}
+.skills .programs_skills img:nth-child(3) {
+  transition: all 0.8s ease 0.4s;
+}
+.skills .programs_skills img:nth-child(4) {
+  transition: all 0.8s ease 0.6s;
+}
+.skills .programs_skills img._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 
 .portfolio {
   padding-top: 112px;
@@ -231,6 +212,11 @@ body {
 }
 .portfolio h2 {
   margin-bottom: 47px;
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.portfolio h2._active {
+  opacity: 1;
 }
 .portfolio .project {
   display: flex;
@@ -244,6 +230,13 @@ body {
 }
 .portfolio .project img {
   width: 936px;
+  transform: translate(200px, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.portfolio .project img._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .portfolio .project a {
   line-height: 22px;
@@ -329,11 +322,11 @@ body {
 }
 .popup .menu {
   font-size: 32px;
+  display: flex;
+  flex-direction: column;
 }
-.popup .menu li {
+.popup .menu a {
   margin-bottom: 68px;
-}
-.popup .menu li a {
   text-decoration: none;
   color: #828282;
   font-size: 18px;
@@ -341,7 +334,7 @@ body {
   font-weight: bold;
   transition: all ease 0.6s;
 }
-.popup .menu li a:hover {
+.popup .menu a:hover {
   color: #070707;
 }
 .popup .btns {

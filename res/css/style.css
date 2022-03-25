@@ -144,7 +144,7 @@ body {
 .me:hover {
   border: 1px solid #850919;
   transition: 1s;
-  box-shadow: #c01723 0 0 15px 2px;
+  box-shadow: #c01723 0 0 10px, #c01723 0 0 30px;
 }
 
 .img__anim {
@@ -179,7 +179,7 @@ body {
   width: 0;
   border-bottom: 1px solid #c01723;
   margin: 0 auto;
-  box-shadow: #c01723 0 0 0 0px;
+  box-shadow: #c01723 0 0 0 0;
   transition: 0.4s;
 }
 
@@ -311,7 +311,7 @@ body {
   height: 250px;
   border: 0 solid #850919;
   border-radius: 20px;
-  box-shadow: #c01723 0 0 0 0px;
+  box-shadow: #c01723 0 0 0 0;
   transition: all ease 0.4s;
 }
 .project_wrap .project .proj_img.proj_img_anim {
@@ -327,7 +327,7 @@ body {
 .project_wrap .project .proj_line.proj_line_anim {
   width: 100%;
   border-bottom: 1px solid #850919;
-  box-shadow: #c01723 0 0 15px 2px;
+  box-shadow: #c01723 0 0 10px, #c01723 0 0 20px, #c01723 0 0 50px;
 }
 .project_wrap .project .project_btns {
   display: flex;
