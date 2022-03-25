@@ -8,6 +8,10 @@ body {
   font-family: "Gilroy-Medium", sans-serif;
 }
 
+.body_wrap {
+  overflow: hidden;
+}
+
 .contact .contact_title h2, .portfolio h2, .skills h2, .about_me h2 {
   font-size: 34px;
   font-weight: bold;
