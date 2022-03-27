@@ -9,20 +9,20 @@ const carH2 = document.getElementById('car_h2');
 //============================Title_Anim======================================\\
 //============================================================================\\
 
-
-const titleList = document.querySelectorAll('.title');
-const lines = document.querySelectorAll('.line');
-// console.log(lines);
-
-for (let i = 0;i<titleList.length;i++) {
-    titleList[i].onmouseover =function (){
-        lines[i].classList.add('line_anim');
-       titleList[i].onmouseleave = () => {
-            lines[i].classList.remove('line_anim');
-        }
-    }
-
-}
+//
+// const titleList = document.querySelectorAll('.title');
+// const lines = document.querySelectorAll('.line');
+// // console.log(lines);
+//
+// for (let i = 0;i<titleList.length;i++) {
+//     titleList[i].onmouseover =function (){
+//         lines[i].classList.add('line_anim');
+//        titleList[i].onmouseleave = () => {
+//             lines[i].classList.remove('line_anim');
+//         }
+//     }
+//
+// }
 
 
 
@@ -123,5 +123,16 @@ carH2Show();
 
 
 
+let carItemFromList = document.querySelectorAll('.list_el');
+let carItemFromListH3 = document.querySelectorAll('._h3_item_from_list');
 
+for (let i = 0; i<carItemFromList.length; i++) {
+
+    carItemFromList[i].onmouseover = ()=>{
+        carItemFromListH3[i].classList.add('_h3_active');
+        carItemFromList[i].onmouseleave = ()=>{
+            carItemFromListH3[i].classList.remove('_h3_active');
+        }
+    }
+}
 
