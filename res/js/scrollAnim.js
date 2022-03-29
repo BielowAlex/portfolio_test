@@ -9,7 +9,7 @@ if (animItemList.length > 0) {
             const animItem = animItemList[i];
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offSet(animItem).top;
-            const animStart = 4;
+            const animStart = 5;
 
             let animItemPointStart = window.innerHeight - animItemHeight / animStart;
             if (animItemHeight > window.innerHeight) {
@@ -19,7 +19,9 @@ if (animItemList.length > 0) {
             if ((pageYOffset > animItemOffset - animItemPointStart) && pageYOffset < (animItemOffset + animItemHeight)) {
                 animItem.classList.add('_active');
             } else {
-                animItem.classList.remove('_active');
+                if(!animItem.classList.contains('_anim_no_hide')) {
+                    animItem.classList.remove('_active');
+                }
             }
         }
     }
@@ -31,5 +33,6 @@ if (animItemList.length > 0) {
         return {top: rect.top + scrollTop, left: rect.left + scrollLeft};
     }
 
-    scrollAnim();
+
 }
+scrollAnim();

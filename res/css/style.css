@@ -94,6 +94,7 @@ body {
 .layer {
   max-width: 1280px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .parentCanvas {
@@ -112,6 +113,8 @@ body {
 }
 
 .wrap {
+  border-top: 2px solid #850919;
+  border-bottom: 2px solid #850919;
   margin-bottom: 25%;
   margin-top: 25%;
   display: flex;
@@ -131,7 +134,7 @@ body {
   margin-right: 10px;
   transform: translate(-100px, 0);
   opacity: 0;
-  transition: 1s;
+  transition: all 1s ease 0.5s;
 }
 .me:hover {
   border: 1px solid #850919;
@@ -151,7 +154,7 @@ body {
   color: #850919;
   transform: translate(120px, 0);
   opacity: 0;
-  transition: all 1s ease 0.5s;
+  transition: all 1s ease 1s;
 }
 .bio p {
   padding: 10px 0 10px 10px;
@@ -198,13 +201,6 @@ body {
   padding: 20px;
   border-top: 1px solid #850919;
   border-bottom: 1px solid #850919;
-  transform: translate(0, 100%);
-  opacity: 0;
-  transition: all 0.6s ease 0s;
-}
-.carrousel_wrap._active {
-  transform: translate(0, 0);
-  opacity: 1;
 }
 .carrousel_wrap .title {
   overflow: hidden;
@@ -212,6 +208,13 @@ body {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 500px;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.carrousel_wrap .title._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .carrousel_wrap .title h2 {
   text-align: center;
@@ -237,6 +240,13 @@ body {
   border-right: 2px solid #850919;
   border-left: 2px solid #850919;
   position: relative;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.carrousel._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .carrousel .img_list {
   display: flex;
@@ -261,7 +271,7 @@ body {
   transition: all 0.3s ease 0s;
 }
 .carrousel .img_list .list_el h3._h3_active {
-  transform: translate(0, 0) scale(1.2);
+  transform: translate(0, 0) scale(1);
   opacity: 1;
 }
 .carrousel .img_list .list_el img {
@@ -282,6 +292,7 @@ body {
   width: 100%;
   z-index: 4;
   overflow: hidden;
+  border-bottom: 1px solid #850919;
   background-color: rgba(0, 0, 0, 0.49);
   margin-bottom: 25%;
   transform: translate(0, 100%);
@@ -389,38 +400,72 @@ body {
   column-gap: 45px;
   width: 100%;
 }
-.project_wrap .project_list .project .project_btns a {
-  font-size: 20px;
-  padding: 5px;
+.project_wrap .project_list .project .project_btns .proj_btn_neon {
+  padding: 10px 20px;
   color: #c01723;
-  border: 1px solid #c01723;
-  display: block;
+  font-size: 20px;
   position: relative;
-  border-radius: 5px;
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border: 1px solid #850919;
+  overflow: hidden;
+  transition: all 1s ease 0s;
 }
-.project_wrap .project_list .project .project_btns a:hover {
-  color: black !important;
-  background: #c01723;
-  box-shadow: #c01723 0 0 15px 2px;
-}
-.project_wrap .project_list .project .project_btns a:before {
-  display: block;
+.project_wrap .project_list .project .project_btns .proj_btn_neon .neon_line {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  z-index: -1;
-  content: "";
-  color: #000 !important;
-  background: #c01723;
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  display: block;
 }
-.project_wrap .project_list .project .project_btns a:hover:before {
-  right: 0;
-  left: auto;
+.project_wrap .project_list .project .project_btns .proj_btn_neon .neon_line__top {
+  top: 0;
+  left: -100%;
   width: 100%;
+  height: 5px;
+  background: #c01723;
+  transition: all 0.6s ease;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon:hover .neon_line__top {
+  left: 100%;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon .neon_line__bottom {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: #c01723;
+  transition: all 0.6s ease;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon:hover .neon_line__bottom {
+  right: 100%;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon .neon_line__left {
+  left: 0;
+  bottom: -100%;
+  width: 5px;
+  height: 100%;
+  background: #c01723;
+  transition: all 0.6s ease;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon:hover .neon_line__left {
+  bottom: 100%;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon .neon_line__right {
+  right: 0;
+  top: -100%;
+  width: 5px;
+  height: 100%;
+  background: #c01723;
+  transition: all 0.6s ease;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon:hover .neon_line__right {
+  top: 100%;
+}
+.project_wrap .project_list .project .project_btns .proj_btn_neon:hover {
+  transition: all 0.5s ease 0.2s;
+  box-shadow: #c01723 0 0 10px, #c01723 0 0 20px;
+  background: #c01723;
+  color: #000;
 }
 .project_wrap .project_list .proj_img {
   margin: 0 auto;

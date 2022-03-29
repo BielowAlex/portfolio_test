@@ -22,15 +22,15 @@
         <!------------------------------------------------------------------------------------------>
         <div class="wrap">
 
-            <img src="res/img/noname2.jpg" alt="AlexBielow" id="me" class="me _anim_item">
+            <img src="res/img/noname2.jpg" alt="AlexBielow" id="me" class="me _anim_item _anim_no_hide">
 
-            <div class="bio _anim_item" id="bio">
-                <div class="title _anim_item">
+            <div class="bio _anim_item _anim_no_hide" id="bio">
+                <div class="title _anim_item _anim_no_hide">
                     <h2 id="bio_h2">Hi my name is Alexander</h2>
                     <div class="line" id="bio_title_line"></div>
                 </div>
 
-                <p class="_anim_item">
+                <p class="_anim_item _anim_no_hide">
                     Мe 20 years old, I am a beginner full-stack developer
                     From Ukraine. Since childhood I was fond of programming. Now I am studying at <a
                         href="https://www.umcs.pl" target="_blank">"UMCS Lublin"</a> in Poland
@@ -49,13 +49,13 @@
         <!------------------------------------------------------------------------------------------>
         <!-------------------------------Carrousel-------------------------------------------------->
         <!------------------------------------------------------------------------------------------>
-        <div class="carrousel_wrap _anim_item">
-            <div class="title">
+        <div class="carrousel_wrap ">
+            <div class="title _anim_item _anim_no_hide">
                 <h2 id="car_h2">My baggage of knowledge</h2>
                 <div class="line"></div>
             </div>
 
-            <div class="carrousel">
+            <div class="carrousel _anim_item _anim_no_hide">
                 <div class="img_list" id="carrousel">
                     <div class="list_el">
                         <h3 class="_h3_item_from_list">1.5 year</h3>
@@ -119,7 +119,7 @@
         <!------------------------------------------------------------------------------------------>
         <!-------------------------------Knowledge-------------------------------------------------->
         <!------------------------------------------------------------------------------------------>
-        <div class="knowledge_wrap _anim_item">
+        <div class="knowledge_wrap _anim_item _anim_no_hide">
 
             <div class="title">
                 <h2>My name is Alexander</h2>
@@ -150,21 +150,32 @@
                 <h2>My projects</h2>
                 <div class="line"></div>
             </div>
-            <div class="project_list _anim_item">
+            <div class="project_list _anim_item _anim_no_hide">
 
                 <div class="project">
                     <img src="res/img/projects/denis_novak.png"
-                         alt="landing" class="proj_img _anim_item">
-                    <div class="project_info _anim_item">
+                         alt="landing" class="proj_img _anim_item _anim_no_hide">
+                    <div class="project_info _anim_item _anim_no_hide">
                         <h3>Denis Novak portfolio</h3>
                         <p>
                             Landing page written in pure HTML/SCSS/js. Fully adaptive
                             + mobile versions, animation, popup, multilingual.
                         </p>
                         <div class="project_btns">
-                            <a href="projects/Landing_page_Denis_Novak/index.html" class="proj_btn"
-                               target="_blank">Open</a>
-                            <a href="#" class="proj_btn" target="_blank">GitHub Repos.</a>
+                            <a href="projects/Landing_page_Denis_Novak/index.html" class="proj_btn_neon" target="_blank">
+                                <span class="neon_line neon_line__top"></span>
+                                <span class="neon_line neon_line__bottom"></span>
+                                <span class="neon_line neon_line__left"></span>
+                                <span class="neon_line neon_line__right"></span>
+                                Open
+                            </a>
+                            <a href="#" class="proj_btn_neon" target="_blank">
+                                <span class="neon_line neon_line__top"></span>
+                                <span class="neon_line neon_line__bottom"></span>
+                                <span class="neon_line neon_line__left"></span>
+                                <span class="neon_line neon_line__right"></span>
+                                GitHub Repos.
+                            </a>
                         </div>
                     </div>
                     <!--                    <div class="proj_line"></div>-->
@@ -172,35 +183,58 @@
 
                 <div class="project">
                     <img src="res/img/projects/landing_spring.png"
-                         alt="" class="proj_img _anim_item">
-                    <div class="project_info _anim_item">
+                         alt="" class="proj_img _anim_item _anim_no_hide">
+                    <div class="project_info _anim_item _anim_no_hide">
                         <h3>Sprig Landing page</h3>
                         <p>
                             Landing page written in pure HTML/SCSS. Fully adaptive
                             + mobile versions and some animation.
                         </p>
                         <div class="project_btns">
-                            <a href="projects/sprig/sprig.html" class="proj_btn" target="_blank">Open</a>
-                            <a href="https://github.com/BielowAlex/Sprig_Landing_Page" class="proj_btn" target="_blank">GitHub
-                                Repos.</a>
+                            <a href="projects/sprig/sprig.html" class="proj_btn_neon" target="_blank">
+                                <span class="neon_line neon_line__top"></span>
+                                <span class="neon_line neon_line__bottom"></span>
+                                <span class="neon_line neon_line__left"></span>
+                                <span class="neon_line neon_line__right"></span>
+                                Open
+                            </a>
+                            <a href="https://github.com/BielowAlex/Sprig_Landing_Page" class="proj_btn_neon" target="_blank">
+                                <span class="neon_line neon_line__top"></span>
+                                <span class="neon_line neon_line__bottom"></span>
+                                <span class="neon_line neon_line__left"></span>
+                                <span class="neon_line neon_line__right"></span>
+                                GitHub Repos.
+                            </a>
                         </div>
                     </div>
 
                 </div>
 
                 <div class="project">
-                    <img src="res/img/projects/dod.png" alt="dod_game"
-                         class="proj_img _anim_item">
+                    <img src="res/img/projects/template_landing.png" alt="dod_game"
+                         class="proj_img _anim_item _anim_no_hide">
 
-                    <div class="project_info _anim_item">
+                    <div class="project_info _anim_item _anim_no_hide">
                     <h3>Drink or Do</h3>
                     <p>
                         The game is written in the programming language of Java Android. Simple interface, replaced
                         database on LocalStorage.
                     </p>
                     <div class="project_btns">
-                        <!--                        <a href="#" class="proj_btn" target="_blank">Open</a>-->
-                        <a href="#" class="proj_btn" target="_blank">GitHub Repos.</a>
+                        <a href="projects/simple_website_template/index.html" class="proj_btn_neon" target="_blank">
+                            <span class="neon_line neon_line__top"></span>
+                            <span class="neon_line neon_line__bottom"></span>
+                            <span class="neon_line neon_line__left"></span>
+                            <span class="neon_line neon_line__right"></span>
+                            Open
+                        </a>
+                        <a href="https://github.com/BielowAlex/simple_website_template" class="proj_btn_neon" target="_blank">
+                            <span class="neon_line neon_line__top"></span>
+                            <span class="neon_line neon_line__bottom"></span>
+                            <span class="neon_line neon_line__left"></span>
+                            <span class="neon_line neon_line__right"></span>
+                            GitHub Repos.
+                        </a>
                     </div>
                     </div>
 

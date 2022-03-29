@@ -35,6 +35,7 @@ body {
 .layer {
   max-width: 1280px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 //======================================================================================================//
@@ -71,6 +72,8 @@ body {
 }
 
 .wrap {
+  border-top: 2px solid $txt_color;
+  border-bottom: 2px solid $txt_color;
   margin-bottom: 25%;
   margin-top: 25%;
   display: flex;
@@ -91,7 +94,7 @@ body {
   margin-right: 10px;
   transform: translate(-100px, 0);
   opacity: 0;
-  transition: 1s;
+  transition: all 1s ease 0.5s;
 
   &:hover {
     border: 1px solid $txt_color;
@@ -113,7 +116,7 @@ body {
   color: $txt_color;
   transform: translate(120px, 0);
   opacity: 0;
-  transition: all 1s ease 0.5s;
+  transition: all 1s ease 1s;
 
 
   p {
@@ -174,15 +177,7 @@ body {
   padding: 20px;
   border-top: 1px solid $txt_color;
   border-bottom: 1px solid $txt_color;
-  transform: translate(0, 100%);
-  opacity: 0;
-  transition: all 0.6s ease 0s;
 
-
-  &._active {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
 
   //margin-top: 300px;
   .title {
@@ -191,6 +186,15 @@ body {
     margin: 0 auto;
     margin-bottom: 20px;
     width: 500px;
+    transform: translate(0, 100%);
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
 
     h2 {
       text-align: center;
@@ -224,6 +228,15 @@ body {
   border-left: 2px solid $txt_color;
   //box-shadow: $txt_color2 0px 0px 15px 2px;
   position: relative;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+
+
+  &._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 
   .img_list {
     display: flex;
@@ -250,7 +263,7 @@ body {
         transition: all 0.3s ease 0s;
 
         &._h3_active {
-          transform: translate(0, 0) scale(1.2);
+          transform: translate(0, 0) scale(1);
           opacity: 1;
         }
       }
@@ -289,6 +302,7 @@ body {
   width: 100%;
   z-index: 4;
   overflow: hidden;
+  border-bottom: 1px solid $txt_color;
   background-color: rgba(0, 0, 0, 0.49);
   margin-bottom: 25%;
   transform: translate(0, 100%);
@@ -385,31 +399,30 @@ body {
     //}
 
 
-
-  .project {
-    display: flex;
-    //flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: border ease;
-    column-gap: 45px;
-    width: 100%;
-    //height: 450px;
-
-    .project_info {
+    .project {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      transform: translate(100%,0);
-      opacity: 0;
-      transition: all 0.6s ease 0s;
+      //flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: border ease;
+      column-gap: 45px;
+      width: 100%;
+      //height: 450px;
 
-      &._active {
-        transform: translate(0,0);
-        opacity: 1;
+      .project_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transform: translate(100%, 0);
+        opacity: 0;
+        transition: all 0.6s ease 0s;
+
+        &._active {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
       }
-    }
 
       h3 {
         text-align: center;
@@ -434,44 +447,92 @@ body {
         column-gap: 45px;
         width: 100%;
 
-        a {
-          font-size: 20px;
-          padding: 5px;
+
+
+        .proj_btn_neon {
+          padding: 10px 20px;
           color: $txt_color2;
-          border: 1px solid $txt_color2;
-          display: block;
+          font-size: 20px;
           position: relative;
-          border-radius: 5px;
-          transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+          display: inline-block;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 3px;
+          border: 1px solid $txt_color;
+          overflow: hidden;
+          transition: all 1s ease 0s;
 
-
-          &:hover {
-            color: black !important;
-            background: $txt_color2;
-            box-shadow: $txt_color2 0 0 15px 2px;
-          }
-
-          &:before {
-            display: block;
+          .neon_line {
             position: absolute;
+            display: block;
+          }
+
+          .neon_line__top {
             top: 0;
-            left: 0;
-            height: 100%;
-            width: 0;
-            z-index: -1;
-            content: '';
-            color: #000 !important;
-            background: $txt_color2;
-            transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-            //0s;
-          }
-
-          &:hover:before {
-            right: 0;
-            left: auto;
+            left: -100%;
             width: 100%;
+            height: 5px;
+            background:$txt_color2;
+            //background: linear-gradient(90deg, transparent, $txt_color2);
+            transition: all 0.6s ease ;
+
           }
 
+          &:hover .neon_line__top {
+            left: 100%;
+          }
+
+          .neon_line__bottom {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 5px;
+            background:$txt_color2;
+            //background: linear-gradient(230deg, transparent, $txt_color2);
+            transition: all 0.6s ease ;
+
+          }
+
+          &:hover .neon_line__bottom {
+            right: 100%;
+          }
+
+          .neon_line__left {
+            left: 0;
+            bottom: -100%;
+            width: 5px;
+            height: 100%;
+            //background: linear-gradient(290deg, transparent, $txt_color2);
+            background:$txt_color2;
+            transition: all 0.6s ease ;
+
+          }
+
+          &:hover .neon_line__left {
+            bottom: 100%;
+          }
+
+          .neon_line__right {
+            right: 0;
+            top: -100%;
+            width: 5px;
+            height: 100%;
+            //background: linear-gradient(190deg, transparent, $txt_color2);
+            background:$txt_color2;
+            transition: all 0.6s ease ;
+
+          }
+
+          &:hover .neon_line__right {
+            top: 100%;
+          }
+
+          &:hover{
+            transition: all 0.5s ease 0.2s;
+            box-shadow: $txt_color2 0 0 10px,$txt_color2 0 0 20px;
+            background: $txt_color2;
+            color: #000;
+          }
 
         }
       }
@@ -485,12 +546,12 @@ body {
       border: 0 solid $txt_color;
       border-radius: 10px;
       box-shadow: $txt_color2 0 0 0 0px;
-      transform: translate(-100%,0);
+      transform: translate(-100%, 0);
       opacity: 0;
       transition: all 0.6s ease;
 
       &._active {
-        transform: translate(0,0);
+        transform: translate(0, 0);
         opacity: 1;
       }
 
