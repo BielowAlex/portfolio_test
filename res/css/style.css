@@ -649,9 +649,6 @@ body {
 }
 
 .footer {
-  position: fixed;
-  z-index: -1;
-  bottom: 0;
   height: 300px;
   width: 100%;
   display: flex;

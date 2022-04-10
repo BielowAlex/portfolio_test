@@ -5,11 +5,11 @@ if (animItemList.length > 0) {
     window.addEventListener('scroll', scrollAnim);
 
     function scrollAnim() {
-        if(pageYOffset<3200){
-            footer.classList.add('_footer_hide');
-        }else if(pageYOffset){
-            footer.classList.remove('_footer_hide');
-        }
+        // if(pageYOffset<3200){
+        //     footer.classList.add('_footer_hide');
+        // }else if(pageYOffset){
+        //     footer.classList.remove('_footer_hide');
+        // }
         for (let i = 0; i < animItemList.length; i++) {
             const animItem = animItemList[i];
             const animItemHeight = animItem.offsetHeight;
