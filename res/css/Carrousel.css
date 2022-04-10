@@ -1,3 +1,31 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.title h2 {
+  color: #c01723;
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.title h2._none {
+  display: none;
+  opacity: 0;
+}
+
+.layer {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .carrousel_wrap {
   z-index: 2;
   width: 100%;
@@ -31,7 +59,7 @@
   opacity: 0;
   transition: 1s;
 }
-.carrousel_wrap .title h2.car_h2_anim {
+.carrousel_wrap .title h2._active {
   transform: translate(0, 0);
   opacity: 1;
 }

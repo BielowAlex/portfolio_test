@@ -9,12 +9,15 @@ body {
   align-items: center;
   margin-left: 10px;
 }
-
-.title > h2 {
+.title h2 {
   color: #c01723;
   margin-bottom: 10px;
   font-size: 40px;
   font-weight: bold;
+}
+.title h2._none {
+  display: none;
+  opacity: 0;
 }
 
 .layer {

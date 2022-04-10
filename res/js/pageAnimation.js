@@ -1,6 +1,6 @@
 
 const bio = document.getElementById('bio');
-const carH2 = document.getElementById('car_h2');
+const carH2 = document.querySelector('.car_h2');
 
 
 
@@ -94,10 +94,7 @@ window.addEventListener('scroll',function (){
 const bioH2 = document.getElementById('bio_h2')
 const bioH2Line = document.getElementById('bio_title_line')
 
-bioH2.onmouseover = function () {
-    bioH2Line.classList.add('line_anim');
-    bioH2.onmouseleave = () => bioH2Line.classList.remove('line_anim');
-}
+
 //============================================================================\\
 //============================Bio_Wrap_Visible================================\\
 //============================================================================\\
@@ -114,12 +111,12 @@ function bioShow() {
 }
 
 setTimeout(bioShow, 1000);
-
-function carH2Show() {
-    carH2.classList.add('car_h2_anim');
-}
-
-carH2Show();
+//
+// function carH2Show() {
+//     carH2.classList.add('car_h2_anim');
+// }
+//
+// carH2Show();
 
 
 

@@ -11,13 +11,17 @@ body {
   align-items: center;
 
   margin-left: 10px;
-}
 
-.title > h2 {
-  color: $txt_color2;
-  margin-bottom: 10px;
-  font-size: $h2_fs;
-  font-weight: bold;
+  h2 {
+    color: $txt_color2;
+    margin-bottom: 10px;
+    font-size: $h2_fs;
+    font-weight: bold;
+    &._none{
+      display: none;
+      opacity: 0;
+    }
+  }
 }
 
 .layer {
