@@ -1,0 +1,27 @@
+@import "Const";
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10px;
+}
+
+.title > h2 {
+  color: $txt_color2;
+  margin-bottom: 10px;
+  font-size: $h2_fs;
+  font-weight: bold;
+}
+
+.layer {
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+}

@@ -1,0 +1,221 @@
+@import "Const";
+
+//======================================================================================================//
+//===========================================Projects===================================================//
+//======================================================================================================//
+
+.project_wrap {
+
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  border-top: 2px solid $txt_color;
+  border-bottom: 2px solid $txt_color;
+
+
+  .title {
+    margin: 0 auto;
+    width: 230px;
+
+    h2 {
+      color: $txt_color2;
+      text-align: center;
+      font-size: $h2_fs;
+      font-weight: bold;
+    }
+
+
+  }
+
+  .project_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    row-gap: 200px;
+    margin: 40px 20px;
+
+
+    .project {
+      display: flex;
+      //flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: border ease;
+      column-gap: 45px;
+      width: 100%;
+      //height: 450px;
+
+      .project_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transform: translate(100%, 0);
+        opacity: 0;
+        transition: all 0.6s ease 0s;
+
+        &._active {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        color: $txt_color2;
+        font-size: 26px;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: $p_fs;
+        color: $txt_color;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      .project_btns {
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+        column-gap: 45px;
+        width: 100%;
+
+
+        .proj_btn_neon {
+          padding: 10px 20px;
+          color: $txt_color2;
+          font-size: 20px;
+          position: relative;
+          display: inline-block;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 3px;
+          border: 1px solid $txt_color;
+          overflow: hidden;
+          transition: all 1s ease 0s;
+
+          .neon_line {
+            position: absolute;
+            display: block;
+          }
+
+          .neon_line__top {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 5px;
+            background: $txt_color2;
+            //background: linear-gradient(90deg, transparent, $txt_color2);
+            transition: all 0.6s ease;
+
+          }
+
+          &:hover .neon_line__top {
+            left: 100%;
+          }
+
+          .neon_line__bottom {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 5px;
+            background: $txt_color2;
+            //background: linear-gradient(230deg, transparent, $txt_color2);
+            transition: all 0.6s ease;
+
+          }
+
+          &:hover .neon_line__bottom {
+            right: 100%;
+          }
+
+          .neon_line__left {
+            left: 0;
+            bottom: -100%;
+            width: 5px;
+            height: 100%;
+            //background: linear-gradient(290deg, transparent, $txt_color2);
+            background: $txt_color2;
+            transition: all 0.6s ease;
+
+          }
+
+          &:hover .neon_line__left {
+            bottom: 100%;
+          }
+
+          .neon_line__right {
+            right: 0;
+            top: -100%;
+            width: 5px;
+            height: 100%;
+            //background: linear-gradient(190deg, transparent, $txt_color2);
+            background: $txt_color2;
+            transition: all 0.6s ease;
+
+          }
+
+          &:hover .neon_line__right {
+            top: 100%;
+          }
+
+          &:hover {
+            transition: all 0.5s ease 0.2s;
+            box-shadow: $txt_color2 0 0 10px, $txt_color2 0 0 20px;
+            background: $txt_color2;
+            color: #000;
+          }
+
+        }
+      }
+    }
+
+
+    .proj_img {
+      margin: 0 auto;
+      width: 500px;
+      height: 350px;
+      border: 0 solid $txt_color;
+      border-radius: 10px;
+      box-shadow: $txt_color2 0 0 0 0px;
+      transform: translate(-100%, 0);
+      opacity: 0;
+      transition: all 0.6s ease;
+
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      &.proj_img_anim {
+        border: 1px solid $txt_color;
+        box-shadow: $txt_color2 0 0 15px 2px;
+      }
+    }
+
+    .proj_line {
+      margin: 20px auto;
+      width: 0;
+      border-bottom: 0 solid $txt_color;
+      transition: all ease 0.4s;
+
+      &.proj_line_anim {
+        width: 100%;
+        border-bottom: 1px solid $txt_color;
+        box-shadow: $txt_color2 0 0 10px, $txt_color2 0 0 20px, $txt_color2 0 0 50px;
+      }
+    }
+
+
+  }
+}
+
+
+//======================================================================================================//
+//===========================================Projects===================================================//
+//======================================================================================================//

@@ -1,0 +1,82 @@
+.wrap {
+  border-top: 2px solid #850919;
+  border-bottom: 2px solid #850919;
+  margin-bottom: 25%;
+  margin-top: 15%;
+  display: flex;
+  padding: 20px;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.49);
+}
+.wrap img {
+  width: 230px;
+  height: 270px;
+  margin-right: 10px;
+}
+
+.me {
+  margin-right: 10px;
+  transform: translate(-100px, 0);
+  opacity: 0;
+  transition: all 1s ease 0.5s;
+}
+.me:hover {
+  border: 1px solid #850919;
+  transition: 1s;
+  box-shadow: #c01723 0 0 10px, #c01723 0 0 30px;
+}
+
+._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.bio {
+  position: center;
+  margin-left: 10px;
+  width: 68%;
+  color: #850919;
+  transform: translate(120px, 0);
+  opacity: 0;
+  transition: all 1s ease 1s;
+}
+.bio p {
+  padding: 10px 0 10px 10px;
+  font-size: 20px;
+}
+.bio p a {
+  color: #850919;
+  font-weight: bold;
+  font-size: 21px;
+  text-shadow: #c01723 0 0 0;
+  transition: all 0.3s ease;
+}
+.bio p a:hover {
+  text-shadow: #c01723 0 0 10px;
+}
+
+.bio > .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin-left: 10px;
+}
+
+.line {
+  width: 0;
+  border-bottom: 1px solid #c01723;
+  margin: 0 auto;
+  box-shadow: #c01723 0 0 0 0px;
+  transition: all 0.4s ease 0s;
+}
+
+._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=Biography.css.map */

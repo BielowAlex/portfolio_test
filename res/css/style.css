@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap");
 * {
   padding: 0;
@@ -137,7 +135,6 @@ body {
 }
 .nav .menu li {
   cursor: pointer;
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,6 +145,12 @@ body {
   transition: all 0.6s ease;
 }
 .nav .menu li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: #c01723;
   text-transform: uppercase;
   font-weight: bold;
@@ -404,13 +407,6 @@ body {
 
 .skill {
   border-bottom: 1px solid #850919;
-  transform: translate(0, 100%);
-  opacity: 0;
-  transition: all 0.6s ease 0s;
-}
-.skill._active {
-  transform: translate(0, 0);
-  opacity: 1;
 }
 .skill .skill_title {
   background: black;
@@ -424,15 +420,23 @@ body {
   padding: 20px;
   margin: 0 20px 0 20px;
   text-align: center;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
 }
 .skill .skill_title h2 {
   text-align: left;
   color: #c01723;
   font-weight: bold;
 }
+.skill .skill_title._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 .skill .skill_list {
   display: flex;
   justify-content: center;
+  overflow: hidden;
   padding: 30px;
   column-gap: 50px;
   flex-wrap: wrap;
@@ -445,6 +449,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
 }
 .skill .skill_list .skill_item img {
   height: 125px;
@@ -469,6 +476,10 @@ body {
   color: #c01723;
   animation: lighter 1.5s linear infinite 0.4s;
 }
+.skill .skill_list .skill_item._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
 
 @keyframes lighter {
   0% {
@@ -482,7 +493,6 @@ body {
   }
 }
 .project_wrap {
-  margin-bottom: 300px;
   z-index: 1;
   width: 100%;
   background-color: black;
@@ -649,7 +659,7 @@ body {
 }
 
 .footer {
-  height: 300px;
+  padding: 100px 0 100px 0;
   width: 100%;
   display: flex;
   flex-direction: column;

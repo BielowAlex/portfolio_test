@@ -1,0 +1,104 @@
+.knowledge_wrap {
+  padding: 0 0 20px 0;
+  width: 100%;
+  z-index: 4;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.49);
+  margin-bottom: 25%;
+}
+.knowledge_wrap p {
+  font-size: 20px;
+  padding: 0 10px;
+  margin: 20px 0;
+  color: #850919;
+}
+
+.skill {
+  border-bottom: 1px solid #850919;
+}
+.skill .skill_title {
+  background: black;
+  box-shadow: inset 0 0 5px #850919, inset 0 0 7px #850919, inset 0 0 9px #850919, inset 0 0 18px #850919;
+  font-size: 40px;
+  border-bottom: 1px solid #850919;
+  border-left: 1px solid #850919;
+  border-right: 1px solid #850919;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 20px;
+  margin: 0 20px 0 20px;
+  text-align: center;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.skill .skill_title h2 {
+  text-align: left;
+  color: #c01723;
+  font-weight: bold;
+}
+.skill .skill_title._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.skill .skill_list {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 30px;
+  column-gap: 50px;
+  flex-wrap: wrap;
+  border-left: 1px solid #c01723;
+  border-right: 1px solid #c01723;
+  width: 1000px;
+  margin: 0 auto;
+}
+.skill .skill_list .skill_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(0, 100%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.skill .skill_list .skill_item img {
+  height: 125px;
+  width: 125px;
+}
+.skill .skill_list .skill_item h3 {
+  margin-top: 10px;
+  text-align: center;
+  color: #c01723;
+  font-weight: bold;
+  font-size: 18px;
+}
+.skill .skill_list .skill_item .rating {
+  margin-top: 10px;
+  height: 20px;
+  display: flex;
+  column-gap: 10px;
+  color: grey;
+  text-align: center;
+}
+.skill .skill_list .skill_item .rating i._red {
+  color: #c01723;
+  animation: lighter 1.5s linear infinite 0.4s;
+}
+.skill .skill_list .skill_item._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+@keyframes lighter {
+  0% {
+    text-shadow: 0 0 3px #850919, 0 0 5px #850919;
+  }
+  50% {
+    text-shadow: 0 0 0 #850919, 0 0 0 #850919;
+  }
+  100% {
+    text-shadow: 0 0 3px #850919, 0 0 5px #850919;
+  }
+}
+
+/*# sourceMappingURL=Skills.css.map */
