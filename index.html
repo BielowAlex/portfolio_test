@@ -17,7 +17,26 @@
 
 <div class="parentCanvas">
     <canvas id="canvasLayer"></canvas>
-    <div class="layer">
+    <div class="layer" id="top">
+
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#top">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+
+        </nav>
+        <div class="burger_btn ">
+            <!--                <i class="fa-solid fa-dash"></i>-->
+            <!--                <i class="fa-solid fa-dash"></i>-->
+            <!--                <i class="fa-solid fa-dash"></i>-->
+            <span class="l1 l"></span>
+            <span class="l2 l"></span>
+            <span class="l3 l"></span>
+        </div>
         <!------------------------------------------------------------------------------------------>
         <!-------------------------------Biography-------------------------------------------------->
         <!------------------------------------------------------------------------------------------>
@@ -32,11 +51,13 @@
                 </div>
 
                 <p class="_anim_item _anim_no_hide">
-                    Мені 20 років, я - початківець front-end розробник  з України. З дитинства захоплювався
+                    Мені 20 років, я - початківець front-end розробник з України. З дитинства захоплювався
                     програмуванням. Навчався в <a href="https://www.umcs.pl" target="_blank">"UMCS Lublin"</a>
-                    у Польському університеті за спеціалізацією Інформатика протягом 2 років. Але через війну в моїй країні продовжити навчання не зміг.
+                    у Польському університеті за спеціалізацією Інформатика протягом 2 років. Але через війну в моїй
+                    країні продовжити навчання не зміг.
                     Окрім університету прохожу курси у Львівській IT школі <a href="https://owu.com.ua" target="_blank">"OctenWeb"</a>,
-                    де і навчаюсь зараз. За цей час я навчився вирішувати проблеми, засвоїв кілька мов і практикував свої знання.
+                    де і навчаюсь зараз. За цей час я навчився вирішувати проблеми, засвоїв кілька мов і практикував
+                    свої знання.
                 </p>
             </div>
         </div>
@@ -47,7 +68,7 @@
         <!------------------------------------------------------------------------------------------>
         <!-------------------------------Carrousel-------------------------------------------------->
         <!------------------------------------------------------------------------------------------>
-        <div class="carrousel_wrap">
+        <div class="carrousel_wrap" id="skills">
             <div class="title _anim_item _anim_no_hide">
                 <h2 id="car_h2">Skills</h2>
                 <div class="line"></div>
@@ -123,7 +144,8 @@
                     <h2>HTML/CSS</h2>
                     <p>
                         Верстанням сторінок захоплювався ще з дитинства, зайнявся серйозно вивченням більше року тому.
-                        Вивчив за цей час <span class="bold">HTML, CSS, BOOTSTRAP</span> і препроцесори такі як <span class="bold">Jade/Pug i SASS/SCSS</span>.
+                        Вивчив за цей час <span class="bold">HTML, CSS, BOOTSTRAP</span> і препроцесори такі як <span
+                            class="bold">Jade/Pug i SASS/SCSS</span>.
                         Зараз з легкістю можу зверстати більшість макетів різної важкості.
                     </p>
                 </div>
@@ -133,18 +155,18 @@
                         <h3>HTML5</h3>
                         <div class="rating">
                             <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red" ></i>
+                            <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle "></i>
                         </div>
                     </div>
                     <div class="skill_item">
-                        <img src="res/img/carrousel/css.svg" alt="html">
+                        <img src="res/img/carrousel/css.svg" alt="css">
                         <h3>CSS</h3>
                         <div class="rating">
                             <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red" ></i>
+                            <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle "></i>
@@ -156,19 +178,19 @@
                         <h3>Bootstrap</h3>
                         <div class="rating">
                             <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red" ></i>
+                            <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle "></i>
                             <i class="fa-solid fa-circle "></i>
                         </div>
                     </div>
                     <div class="skill_item">
-                        <img src="res/img/carrousel/sass.svg" alt="bootstrap">
+                        <img src="res/img/carrousel/sass.svg" alt="SASS">
                         <h3>SASS</h3>
                         <div class="rating">
                             <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red" ></i>
                             <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle "></i>
                             <i class="fa-solid fa-circle "></i>
                             <i class="fa-solid fa-circle "></i>
                         </div>
@@ -180,36 +202,111 @@
                 <div class="skill_title title ">
                     <h2>JavaScript</h2>
                     <p>
-                        Верстанням сторінок захоплювався ще з дитинства, зайнявся серйозно вивченням більше року тому.
-                        Вивчив за цей час <span class="bold">HTML, CSS, BOOTSTRAP</span> і препроцесори такі як <span class="bold">Jade/Pug i SASS/SCSS</span>.
-                        Зараз з легкістю можу зверстати більшість макетів різної важкості.
+                        <span class="bold">JS</span> почав вивчати після місяця користування
+                        <span class="bold">HTML/CSS</span>власноруч і окрім цього закріпив всі ці знання на курсах.
+                        Зараз на курсах вивчаю бібліотеку <span class="bold">React</span>.
                     </p>
                 </div>
                 <div class="skill_list">
                     <div class="skill_item">
-                        <img src="res/img/carrousel/javascript.svg" alt="html">
+                        <img src="res/img/carrousel/javascript.svg" alt="JS">
                         <h3>HTML5</h3>
                         <div class="rating">
                             <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red" ></i>
+                            <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle _red"></i>
                             <i class="fa-solid fa-circle "></i>
                         </div>
                     </div>
                     <div class="skill_item">
-                        <img src="res/img/carrousel/react.svg" alt="html">
-                        <h3>CSS</h3>
+                        <img src="res/img/carrousel/react.svg" alt="React">
+                        <h3>React</h3>
                         <div class="rating">
                             <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red" ></i>
-                            <i class="fa-solid fa-circle _red"></i>
-                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle "></i>
+                            <i class="fa-solid fa-circle "></i>
+                            <i class="fa-solid fa-circle "></i>
                             <i class="fa-solid fa-circle "></i>
                         </div>
                     </div>
 
 
+                </div>
+            </div>
+
+            <div class="skill _anim_item _anim_no_hide">
+                <div class="skill_title title ">
+                    <h2>Database</h2>
+                    <p>
+                        <span class="bold">MySQL, Oracle</span> вивчав в університеті і закріпив знання
+                        в IT школі де в додаток вивчив <span class="bold">MongoDB</span>.
+                        Знаю всю базову інформацію користуваннями цими базами даних.
+
+                    </p>
+                </div>
+                <div class="skill_list">
+                    <div class="skill_item">
+                        <img src="res/img/carrousel/mysql.svg" alt="mysql">
+                        <h3>MySQL</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle "></i>
+                        </div>
+                    </div>
+                    <div class="skill_item">
+                        <img src="res/img/carrousel/mongodb.svg" alt="MongoDB">
+                        <h3>MongoDB</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle "></i>
+                            <i class="fa-solid fa-circle "></i>
+                            <i class="fa-solid fa-circle "></i>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="skill _anim_item _anim_no_hide">
+                <div class="skill_title title ">
+                    <h2>Other</h2>
+                    <p>
+                        <span class="bold">Java i Spring</span> знання цих мов я отримав в університеті
+                        і окремо купляв курси для поглибленного вивчення мови і фреймворку.Spring -
+                        MVC,Hibernate,Boot,AOP,Security
+                        все це розумію на тільки базовому рівні.
+
+                    </p>
+                </div>
+                <div class="skill_list">
+                    <div class="skill_item">
+                        <img src="res/img/carrousel/java.svg" alt="Java">
+                        <h3>Java</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle "></i>
+                        </div>
+                    </div>
+                    <div class="skill_item">
+                        <img src="res/img/carrousel/spring.svg" alt="Spring">
+                        <h3>Spring</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle _red"></i>
+                            <i class="fa-solid fa-circle "></i>
+                            <i class="fa-solid fa-circle "></i>
+                            <i class="fa-solid fa-circle "></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -221,7 +318,7 @@
         <!------------------------------------------------------------------------------------------>
         <!-------------------------------Projects--------------------------------------------------->
         <!------------------------------------------------------------------------------------------>
-        <div class="project_wrap">
+        <div class="project_wrap" id="projects">
             <div class="title">
                 <h2>My projects</h2>
                 <div class="line"></div>
@@ -354,11 +451,50 @@
         <!------------------------------------------------------------------------------------------>
 
 
+        <footer class="footer">
+
+            <div class="title footer_title">
+                <h2>Contact</h2>
+                <div class="links">
+                    <a href="#" target="_blank">
+                        <div class="link">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/alex_bielow/"  target="_blank">
+                        <div class="link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="https://facebook.com/sasha.below.336" target="_blank">
+                        <div class="link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                    </a>
+                    <a href="https://github.com/BielowAlex" target="_blank">
+                        <div class="link">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                    </a>
+                </div>
+                    <p>Want to know more or just chat? You are welcome!</p>
+            </div>
+
+
+                <h3>Language:</h3>
+            <div class="my_language">
+                <span class="bold">English:A2 Pre Intermediate</span>
+                <span class="bold">Polish:C2 Proficient</span>
+                <span class="bold">Ukrainian:Native</span>
+                <span class="bold">Russian:C2 Proficient</span>
+            </div>
+        </footer>
+
     </div>
 </div>
 
-
 <script src="res/js/matrix.js"></script>
+<script src="res/js/navigation.js"></script>
 <script src="res/js/pageAnimation.js"></script>
 <script src="res/js/scrollAnim.js"></script>
 </body>
