@@ -1,4 +1,9 @@
 const lngList = document.querySelectorAll('._lng');
+const setLang = (lng) => {
+    localStorage.setItem('lng',lng);
+    langSelector();
+}
+
 if(localStorage.getItem('lng')===null){
     setLang('_eng');
 }
@@ -26,10 +31,7 @@ const langSelector = () =>{
 }
 
 
-const setLang = (lng) => {
-    localStorage.setItem('lng',lng);
-    langSelector();
-}
+
 
 
 langSelector();
