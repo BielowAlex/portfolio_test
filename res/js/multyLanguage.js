@@ -1,5 +1,8 @@
 const lngList = document.querySelectorAll('._lng');
-console.log(lngList);
+if(localStorage.getItem('lng')===null){
+    setLang('_eng');
+}
+
 
 const eng = document.querySelector('.eng');
 const pl = document.querySelector('.pl');
@@ -24,25 +27,25 @@ const langSelector = () =>{
 
 
 const setLang = (lng) => {
-    console.log('lol')
     localStorage.setItem('lng',lng);
     langSelector();
 }
+
 
 langSelector();
 
 
 eng.onclick = () => {
-    language = '_eng';
+    const language = '_eng';
     setLang(language);
 
 }
 pl.onclick = () => {
-    language = '_pl';
+    const language = '_pl';
     setLang(language);
 }
 ukr.onclick = () => {
-    language = '_ukr';
+    const language = '_ukr';
     setLang(language);
 }
 
